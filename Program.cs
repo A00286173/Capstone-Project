@@ -9,69 +9,131 @@ namespace SeleniumYouTubeTest
     {
         static void Main(string[] args)
         {
-            // Set the path of the EdgeDriver executable if it's not in the system PATH
-            var edgeOptions = new EdgeOptions();
-            //edgeOptions.AddArgument("headless"); // Runs browser in headless mode (optional)
-            //edgeOptions.AddArgument("disable-gpu"); // Disable GPU (optional)
-            
-            // Initialize the Edge WebDriver
-            IWebDriver driver = new EdgeDriver(edgeOptions);
+            Console.WriteLine("Select the type of testing to perform:");
+            Console.WriteLine("1. UI Testing");
+            Console.WriteLine("2. Use Case Testing");
+            Console.Write("Enter your choice (1 or 2): ");
 
+            string choice = Console.ReadLine();
+
+            if (choice == "1")
+            {
+                PerformUITesting();
+            }
+            else if (choice == "2")
+            {
+                PerformUseCaseTesting();
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. Please enter 1 or 2.");
+            }
+        }
+
+        static IWebDriver StartWebDriver()
+        {
+            var edgeOptions = new EdgeOptions();
+            IWebDriver driver = new EdgeDriver(edgeOptions);
+            driver.Manage().Window.Maximize();
+            return driver;
+        }
+
+        static void PerformUITesting()
+        {
+            IWebDriver driver = StartWebDriver();
             try
             {
-                // Navigate to the login page
                 Console.WriteLine("Navigating to Login Page...");
                 driver.Navigate().GoToUrl("https://localhost:5243/Account/Login");
                 driver.Manage().Window.Maximize();
                 Thread.Sleep(1000);
 
-                // Find and fill in the username field
                 Console.WriteLine("Entering username...");
                 IWebElement uname = driver.FindElement(By.Name("Username"));
                 uname.SendKeys("alice");
 
-                // Find and fill in the password field
                 Console.WriteLine("Entering password...");
                 IWebElement pass = driver.FindElement(By.Name("Password"));
                 pass.SendKeys("Pass123$");
 
-                // Click the login button
                 Console.WriteLine("Clicking login button...");
                 IWebElement loginButton = driver.FindElement(By.Name("button"));
                 loginButton.Click();
 
-                // Wait for a few seconds to let the page load
                 Thread.Sleep(3000);
 
-                // Navigate to the homepage
                 Console.WriteLine("Navigating to Home Page...");
                 driver.Navigate().GoToUrl("https://localhost:7298/");
                 driver.Manage().Window.Maximize();
                 Thread.Sleep(3000);
 
-                // Click the login button on the homepage
                 Console.WriteLine("Clicking login on the homepage...");
                 IWebElement login = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/nav/a[2]/img"));
                 login.Click();
-                
-                // Wait for a few seconds
+
                 Thread.Sleep(3000);
 
-                // Click the logout button
                 Console.WriteLine("Clicking logout button...");
                 IWebElement logout = driver.FindElement(By.XPath("/html/body/div[1]/div[2]/nav/div/div/form/button"));
                 logout.Click();
 
-                // Print success message
-                Console.WriteLine("Test completed successfully!");
+                Console.WriteLine("UI Test completed successfully!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                Console.WriteLine($"An error occurred during UI testing: {ex.Message}");
             }
             finally
             {
-                // Close the browser
+                Console.WriteLine("Closing browser...");
+                driver.Quit();
+            }
+        }
+
+        static void PerformUseCaseTesting()
+        {   
+
+          
+                Console.WriteLine("Starting Use Case Testing...");
+
+                Console.Write("Enter username for login: ");
+                string inputUsername = Console.ReadLine();
+
+                Console.Write("Enter password for login: ");
+                string inputPassword = Console.ReadLine();
+
+                IWebDriver driver = StartWebDriver();
+
+            try
+            {
+                Console.WriteLine("Use Case testing: Login");
+               
+                driver.Navigate().GoToUrl("https://localhost:5243/Account/Login");
+                driver.Manage().Window.Maximize();
+                Thread.Sleep(1000);
+
+                IWebElement uname = driver.FindElement(By.Name("Username"));
+                uname.SendKeys(inputUsername);
+
+                IWebElement pass = driver.FindElement(By.Name("Password"));
+                pass.SendKeys(inputPassword);
+
+                IWebElement loginButton = driver.FindElement(By.Name("button"));
+                loginButton.Click();
+
+                Thread.Sleep(3000);
+
+                bool isLoginSuccessful = driver.Url.Contains("/Home");
+                Console.WriteLine(isLoginSuccessful ? "Test Case Passed" : "Test Case Failed");
+
+                Console.WriteLine("Use Case Testing completed successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred during Use Case testing: {ex.Message}");
+            }
+            finally
+            {
                 Console.WriteLine("Closing browser...");
                 driver.Quit();
             }

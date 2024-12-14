@@ -19,3 +19,5 @@ C:\Users\tiwar\Desktop\Capstone Projects\CapstoneTesting\obj\Debug\net9.0\refint
 C:\Users\tiwar\Desktop\Capstone Projects\CapstoneTesting\obj\Debug\net9.0\CapstoneTesting.pdb
 C:\Users\tiwar\Desktop\Capstone Projects\CapstoneTesting\obj\Debug\net9.0\CapstoneTesting.genruntimeconfig.cache
 C:\Users\tiwar\Desktop\Capstone Projects\CapstoneTesting\obj\Debug\net9.0\ref\CapstoneTesting.dll
+C:\Users\tiwar\Desktop\Capstone Projects\CapstoneTesting\obj\Debug\net9.0\CapstoneTesting.sourcelink.json
+C:\Users\tiwar\Desktop\Capstone Projects\CapstoneTesting\bin\Debug\net9.0\SeleniumExtras.WaitHelpers.dll

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kT5YUYiIDSA=",
+  "dgSpecHash": "jNA+pJpQsok=",
   "success": true,
   "projectFilePath": "C:\\Users\\tiwar\\Desktop\\Capstone Projects\\CapstoneTesting\\CapstoneTesting.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tiwar\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\tiwar\\.nuget\\packages\\selenium.support\\4.27.0\\selenium.support.4.27.0.nupkg.sha512",
     "C:\\Users\\tiwar\\.nuget\\packages\\selenium.webdriver\\4.27.0\\selenium.webdriver.4.27.0.nupkg.sha512",
     "C:\\Users\\tiwar\\.nuget\\packages\\selenium.webdriver.microsoftdriver\\17.17134.0\\selenium.webdriver.microsoftdriver.17.17134.0.nupkg.sha512"
