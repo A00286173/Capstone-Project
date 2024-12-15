@@ -58,7 +58,15 @@ The group is using Selenium to automate unit testing for the project, ensuring t
      - Simulate user registration, login (valid and invalid), and adding items to the cart before proceeding to checkout.
    - **Related Testing Type**: Acceptance Testing, as it ensures workflows align with business requirements and provide a seamless user experience.
 
-Details about Aliz Parajuli's techniques will be added later.
+### Aliz Parajuli's Techniques
+
+1. **Decision Table Testing**:
+      Decision Table Testing is a technique used to model complex business logic and decision-making processes in the software. It involves creating a decision table, which lists all possible conditions and actions that the software            should perform based on those conditions. This method is particularly useful for testing systems with multiple inputs, where the output depends on a combination of conditions. The decision table helps to identify all possible             combinations of conditions, ensuring that each is tested at least once, making it easier to cover a wide range of test scenarios.
+    
+
+2. **Exploratory Testing**:
+      Exploratory Testing is an approach where testers actively explore the application without predefined test cases. It involves simultaneous learning, test design, and execution, allowing testers to adapt their testing based on their 
+      discoveries during the process. This method is especially useful when there is limited documentation or when the tester needs to understand the system deeply. Testers use their creativity and domain knowledge to explore different         paths and uncover issues that may not have been anticipated during scripted testing. It’s particularly effective for finding edge cases and usability issues.
 
 ## Links
 - **Azure DevOps Board**: *Placeholder for the Azure DevOps board link.*
