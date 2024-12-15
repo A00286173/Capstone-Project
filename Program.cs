@@ -29,6 +29,10 @@ namespace SeleniumYouTubeTest
             }
             else if (choice == "3")
             {
+                PerformCompatibilityTesting();
+            }
+            else if (choice == "4")
+            {
                 PerformUsabilityTesting();
             }
             else
@@ -145,11 +149,11 @@ namespace SeleniumYouTubeTest
                 driver.Quit();
             }
         }
-        static void PerformUsabilityTesting()
+        static void PerformCompatibilityTesting()
         {
 
 
-            Console.WriteLine("Starting Usability Testing...");
+            Console.WriteLine("Starting Compatibility Testing...");
 
             IWebDriver driver = StartWebDriver();
             var options = new ChromeOptions();
@@ -197,6 +201,47 @@ namespace SeleniumYouTubeTest
             finally
             {
                 Console.WriteLine("Closing Chrome Browser..");
+                driver.Quit();
+            }
+        }
+        static void PerformUsabilityTesting()
+        {
+            IWebDriver driver = StartWebDriver();
+            try
+            {
+                Console.WriteLine("Navigating to Login Page...");
+                driver.Navigate().GoToUrl("https://localhost:5243/Account/Login");
+                driver.Manage().Window.Maximize();
+                Thread.Sleep(1000);
+
+                Console.WriteLine("Entering username...");
+                IWebElement uname = driver.FindElement(By.Name("Username"));
+                uname.SendKeys("alice");
+
+                Console.WriteLine("Entering password...");
+                IWebElement pass = driver.FindElement(By.Name("Password"));
+                pass.SendKeys("Pass123$");
+
+                Console.WriteLine("Clicking login button...");
+                IWebElement loginButton = driver.FindElement(By.Name("button"));
+                loginButton.Click();
+
+                Thread.Sleep(3000);
+
+                Console.WriteLine("Navigating to Home Page...");
+                driver.Navigate().GoToUrl("https://localhost:7298/");
+                driver.Manage().Window.Maximize();
+                Thread.Sleep(3000);
+
+                Console.WriteLine("Usability Testing completed successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred during UI testing: {ex.Message}");
+            }
+            finally
+            {
+                Console.WriteLine("Closing browser...");
                 driver.Quit();
             }
         }
