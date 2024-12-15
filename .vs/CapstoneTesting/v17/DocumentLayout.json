@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tiwar\\Desktop\\Capstone Projects\\CapstoneTesting\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Capstone-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E9FCFC0-762F-463F-94FB-6130B4FE39D0}|CapstoneTesting.csproj|c:\\users\\tiwar\\desktop\\capstone projects\\capstonetesting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8E9FCFC0-762F-463F-94FB-6130B4FE39D0}|CapstoneTesting.csproj|c:\\users\\user\\source\\repos\\capstone-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E9FCFC0-762F-463F-94FB-6130B4FE39D0}|CapstoneTesting.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tiwar\\Desktop\\Capstone Projects\\CapstoneTesting\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Capstone-Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tiwar\\Desktop\\Capstone Projects\\CapstoneTesting\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Capstone-Project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAswI4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAiwLkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T00:51:35.838Z",
               "EditorCaption": ""
