@@ -32,7 +32,7 @@ The group is using Selenium to automate unit testing for the project, ensuring t
    - Validates that all UI components, such as buttons, input fields, and filters, function correctly to provide a smooth user experience.
 2. **Acceptance Testing**:
    - Ensures that core workflows like user registration, login, and checkout meet specified business requirements.
-   - 
+   
 ### Aliz Parajuli's Tests
 1. **Compatibility Testing**:
    - Tested the project’s compatibility on Chrome and Edge browsers using Selenium WebDriver.
